@@ -1,0 +1,23 @@
+{% include "layout.html" %}
+		<link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+
+	<body>
+		<div style="center-alignment" class="register">
+			<h4> ADD PHONE NUMBERS</h4>
+			<div class="links">
+             <a href="{{ url_for('phone_list') }}">contact list</a>
+			</div>
+			<form action="{{ url_for('contacts') }}" method="post" autocomplete="off">
+				<label for="phone">
+					<i class="fas fa-phone"></i>
+				</label>
+				<input type="text" name="phone" placeholder="+254" id="phone" required>
+
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</body>
+</html>

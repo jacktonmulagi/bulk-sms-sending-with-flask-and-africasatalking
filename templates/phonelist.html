@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<META HTTP-EQUIV="refresh" CONTENT="20">
+<h2>Phonelist Page</h2>
+<div>
+    <p>contacts saved:</p>
+    <table class="table table-striped">
+
+
+                <tr>
+              <th>id</th>
+              <th>phoneNo</th>
+
+
+
+
+          </tr>
+
+
+
+
+
+                {% for row in phoneno %}
+                <tr>
+                    <td>{{row.0}}</td>
+                    <td>{{row.1}}</td>
+
+                    <td>
+
+
+
+
+
+                    </td>
+
+                </tr>
+
+        <div id="modaledit{{row.0}}" class="modal fade" role="dialog">
+
+
+   <div class="modal-dialog">
+
+
+      <div class="modal-content">
+
+
+         <div class="modal-header">
+
+
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+
+
+
+
+
+
+
+
+
+
+         </div>
+
+
+         <div class="modal-footer">
+
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+
+         </div>
+
+
+      </div>
+
+
+   </div>
+
+
+</div>
+
+
+                {% endfor  %}
+
+
+                </tbody>
+
+
+            </table>
+</div>
+{% endblock %}
